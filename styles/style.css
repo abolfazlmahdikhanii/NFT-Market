@@ -1,0 +1,74 @@
+:root {
+    --background: #2B2B2B;
+    --background-secondry: #3B3B3B;
+    --lbl-text: #858584;
+    --text: #FFFFFF;
+    --btn-bg: #A259FF;
+    --blue-accent: #377DF7;
+    --red-accent: #FF7262;
+    --grdient-1: linear-gradient(100.92deg, #A259FF 13.57%, #FF6250 97.65%);
+    --grdient-2: linear-gradient(128.15deg, #A259FF 49.75%, #377DF7 136.56%);
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--background);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2.8rem;
+
+}
+
+button {
+    all: unset;
+    border-radius: 1.2rem;
+}
+
+/* Hesader Logo */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.header-logo__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+
+}
+
+/* Header Menu */
+.header-menu {
+    position: relative;
+}
+
+.menu-icon {
+    display: grid;
+    place-items: center
+}
