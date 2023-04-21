@@ -8,6 +8,19 @@
     --red-accent: #FF7262;
     --grdient-1: linear-gradient(100.92deg, #A259FF 13.57%, #FF6250 97.65%);
     --grdient-2: linear-gradient(128.15deg, #A259FF 49.75%, #377DF7 136.56%);
+
+    --h1-size: 6.7rem;
+    --h2-size: 5.1rem;
+    --h3-size: 3.8rem;
+    --h4-size: 2.8rem;
+    --h5-size: 2.2rem;
+    --h6-size: 6.7rem;
+    --base-size: 1.6rem;
+    --caption-size: 1.2rem;
+
+    --btn-primary: 7.2rem;
+    --btn-secondry: 6rem;
+    --btn-tetiary: 4.6rem
 }
 
 *,
@@ -24,8 +37,10 @@ html {
 
 body {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.6rem;
+    font-size: var(--base-size);
     background-color: var(--background);
+    color: var(--text);
+    font-weight: 600;
 }
 
 ul {
@@ -41,14 +56,32 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 2.8rem;
-
+    padding: 2rem 3rem;
+    position: relative;
 }
 
-button {
+/* button */
+
+.btn {
     all: unset;
-    border-radius: 1.2rem;
+
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    padding: 0 5rem;
+    max-width: 100%;
+
+
 }
+
+.btn-secondry {
+
+    height: var(--btn-primary);
+    background-color: var(--btn-bg);
+}
+
 
 /* Hesader Logo */
 .header-logo {
@@ -64,11 +97,144 @@ button {
 }
 
 /* Header Menu */
-.header-menu {
-    position: relative;
-}
+.header-menu {}
 
 .menu-icon {
     display: grid;
     place-items: center
+}
+
+.menu-list {
+    width: 30rem;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background-secondry);
+    padding: 2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    display: none;
+}
+
+.menu-item {
+    padding: 1.7rem;
+    border-radius: 1.1rem;
+    transition: all .3s;
+}
+
+.menu-item:hover {
+    background-color: var(--btn-bg);
+}
+
+.menu__link {}
+
+main {
+    width: 100%;
+    padding: 3.5rem 3rem;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hero-section--info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.hero-section__title {
+    font-size: var(--h4-size);
+    line-height: 1.5;
+    font-weight: 600;
+
+}
+
+.hero-section__dis {
+    line-height: 1.6;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-section--card {
+    background-color: var(--background-secondry);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 22rem;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-caption {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-caption__title {
+    font-size: var(--h5-size);
+    font-weight: 600;
+}
+
+.card-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+
+}
+
+.card-profile p {
+    font-weight: 400;
+}
+
+.card-profile--img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-profile--img img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section--btn {
+    display: block;
+
+}
+
+.hero-section--count {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hero-section--col{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.count__title{
+    font-size: var(--h5-size);
+    font-family: "Space Mono",monospace;
+}
+.count__info{
+    font-weight: 400;
 }
