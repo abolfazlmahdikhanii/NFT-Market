@@ -143,6 +143,11 @@ main {
 }
 
 /* HERO SECTION */
+.hero-section {
+    max-width: 105rem;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .hero-section, .info__wrapper {
     display: flex;
@@ -169,6 +174,7 @@ main {
     line-height: 1.6;
     font-weight: 400;
     font-style: normal;
+    text-transform: capitalize;
 }
 
 .hero-section--card {
@@ -200,6 +206,7 @@ main {
     font-size: var(--h5-size);
     font-weight: 600;
 }
+
 
 .card-profile {
     display: flex;
@@ -254,9 +261,9 @@ main {
 
 .hero-section---start {}
 
-@media screen and (min-width:834px) {
+@media screen and (min-width:768px) {
     main {
-        padding: 7rem;
+        padding: 5rem;
     }
 
     .hero-section {
@@ -264,20 +271,28 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: max-content;
-        column-gap: 7rem;
+        column-gap: 4rem;
+
     }
 
     .hero-section--info {
         grid-column: 1/2;
+        width: 33rem;
     }
 
     .hero-section__title {
         font-size: var(--h3-size);
+   
     }
+
+    
 
     .hero-section--card {
         grid-column: 2/3;
         grid-row: auto;
+        width: 100%;
+        max-width: 51rem;
+
     }
 
     .hero-section---start,
@@ -288,13 +303,63 @@ main {
 
     .hero-section---start {
         margin-top: -15rem;
+        width: 14rem;
     }
 
     .hero-section--count {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
         margin-top: -10rem;
     }
 
     .card-img {
         height: 27rem;
+    }
+}
+
+@media screen and (min-width:980px) {
+    main {
+        padding: 7rem;
+
+    }
+
+    .hero-section--info{
+        width: 51rem;
+    }
+    .hero-section__title {
+        font-size: var(--h1-size);
+    
+        line-height: 1.2;
+    }
+    .hero-section__dis{
+        font-size: 2.2rem;
+        font-weight: 300;
+        
+    }
+    .break{
+        display: block;
+    }
+    
+
+    .card-img {
+        height: 35rem;
+        max-height: 40rem;
+    }
+    .hero-section---start {
+        margin-top: -10rem;
+        width: 20rem;
+    }
+
+    .hero-section--count {
+        margin-top: -1rem;
+      
+    }
+    .count__title {
+        font-size: var(--h4-size);
+    }
+    .count__info{
+        font-size: 2.1rem;
+        font-weight: 300;
     }
 }
