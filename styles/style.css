@@ -76,6 +76,13 @@ a {
     background-color: var(--btn-bg);
 }
 
+.btn-outline {
+    border: 2px solid var(--btn-bg);
+    height: 6rem;
+    color: var(--btn-bg);
+
+}
+
 
 /* Hesader Logo */
 .header {
@@ -265,29 +272,32 @@ main {
 
 /* ========== Trending ================ */
 
-.tranding {
+.tranding, .top-chart {
+    margin-top: 4rem;
     padding: 8rem 0 4rem 0;
 }
 
-.tranding-header {
+.tranding-header, .top-chart-header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.trending__title {
+.trending__title, .top-chart__title {
     font-size: var(--h4-size);
     font-weight: 600;
 }
 
-.trending__dis {
+.trending__dis, .top-chart__dis {
     font-size: var(--base-size);
     font-weight: 400;
 }
 
 .trending-body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    column-gap: 3.3rem;
+    row-gap: 2rem;
 }
 
 .trending-box {
@@ -299,7 +309,8 @@ main {
 
 .trending-box--img {
     width: 100%;
-    height: 45rem;
+    height: auto;
+    max-height: 45rem;
     overflow: hidden;
     border-radius: 2rem;
 }
@@ -337,6 +348,168 @@ main {
     font-size: 1.8rem;
 }
 
+/* Top creator */
+.header-row {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.top-chart-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2.5rem;
+
+    height: 60rem;
+    overflow: hidden;
+}
+
+.top-chart-header {
+    margin-bottom: 4rem;
+}
+
+.top-crator__box {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    background-color: var(--background-secondry);
+    border-radius: 2rem;
+}
+
+.top-crator--img {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+}
+
+.top-crator__img {
+    width: 100%;
+    height: 100%;
+}
+
+.badge {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    transform: translate(-50%, -50%);
+    color: var(--lbl-text);
+    background-color: var(--background);
+    font-size: 1.6rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.top-crator--info {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.top-crator__title {
+    font-size: var(--h5-size);
+}
+
+.top-crator--row {
+    display: flex;
+    align-items: center;
+
+}
+
+.top-crator__sub {
+    color: var(--lbl-text);
+    font-size: var(--base-size);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.top-crator__price {
+    margin-left: 1rem;
+    font-family: Space Mono;
+    font-weight: 400;
+    white-space: nowrap;
+    font-size: var(--base-size);
+}
+
+.btn-header {
+    display: none;
+}
+
+.btn-body {
+    display: flex;
+    margin-top: 4.5rem;
+}
+
+/* Category */
+.category {
+    margin-top: 3rem;
+}
+
+.category-body {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-auto-rows: 40rem;
+    column-gap: 3rem;
+    row-gap: 4rem;
+}
+
+.category--box {
+    width: 100%;
+    background-color: var(--background-secondry);
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+
+}
+
+.categroy--img {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 75%;
+
+
+
+}
+
+.category__img {
+    background: rgba(255, 255, 255, 0.10);
+    filter: blur(7.5px);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.category__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.category-info {
+    padding: 3rem 3rem 3.5rem 3rem;
+}
+
+.category__title {
+    font-size: var(--h5-size);
+    font-weight: 600;
+}
+
+@media screen and (min-width:672px) {
+    .top-chart-body {
+        height: 35rem;
+
+    }
+}
 
 @media screen and (min-width:768px) {
     main {
@@ -393,6 +566,19 @@ main {
     .card-img {
         height: 27rem;
     }
+
+
+
+}
+
+@media screen and (min-width:850px) {
+    .btn-body {
+        display: none;
+    }
+
+    .btn-header {
+        display: flex;
+    }
 }
 
 @media screen and (min-width:980px) {
@@ -444,5 +630,40 @@ main {
     .count__info {
         font-size: 2.1rem;
         font-weight: 300;
+    }
+
+
+}
+
+@media screen and (min-width:1024px) {
+    .top-chart-body {
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+
+        height: auto;
+    }
+
+    .top-crator__box {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+
+
+    }
+
+    .top-crator--img {
+        width: 11rem;
+        height: 11rem;
+
+    }
+
+    .badge {
+        position: absolute;
+        top: 14px;
+        left: -32px;
+
     }
 }
