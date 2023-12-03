@@ -815,7 +815,37 @@ margin: 2.5rem 0;
     font-weight: 400;
     line-height: 1.5;
 }
+.subscribe-input{
+    padding: 1.9rem 2.2rem;
+    background-color: #fff;
+    border-radius: 2.3rem;
+    -webkit-border-radius: 2.3rem;
+    -moz-border-radius: 2.3rem;
+    -ms-border-radius: 2.3rem;
+    -o-border-radius: 2.3rem;
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+}
+.subscribe-input__input{
+    all: unset;
+    font: inherit;
+    
 
+    
+}
+.subscribe-input__input::placeholder{
+    font-weight: 400;
+    color: var(--background);
+}
+.subscribe-btn{
+   display: flex;
+   width: 100%;
+}
+.btn-sm{
+height: 5.5rem;
+width: 100%;
+max-width: 100%;
+}
 @media screen and (min-width:650px) {
     .guid--box {
         width: 100%;
