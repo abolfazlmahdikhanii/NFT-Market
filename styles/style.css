@@ -766,11 +766,11 @@ main,
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
 }
-.subscribe-info {
+.subscribe-info,.footer-info {
   padding: 0 1rem;
   margin: 2.5rem 0;
 }
-.subscribe__title {
+.subscribe__title,.footer-info__title {
   font-size: var(--h4-size);
   color: #fff;
   font-weight: 600;
@@ -778,12 +778,13 @@ main,
   line-height: 1.45;
   margin-bottom: 0.8rem;
 }
-.subscribe__dis {
+.subscribe__dis,.footer-info__dis {
   font-size: var(--base-size);
   font-weight: 400;
   line-height: 1.5;
+  color: #ccc;
 }
-.subscribe-input {
+.subscribe-input,.footer-input {
   padding: 1.9rem 2.2rem;
   background-color: #fff;
   border-radius: 2.3rem;
@@ -794,17 +795,22 @@ main,
   margin-top: 4.5rem;
   margin-bottom: 2rem;
 }
-.subscribe-input__input {
+.subscribe-input__input,.footer-input__input {
   all: unset;
   font: inherit;
+  width: 100%;
 }
-.subscribe-input__input::placeholder {
+.subscribe-input__input::placeholder,.footer-input__input {
   font-weight: 400;
   color: var(--background);
 }
-.subscribe-btn {
+.subscribe-btn,.footer-btn {
   display: flex;
   width: 100%;
+
+}
+.subscribe-btn button,.footer-btn button{
+  height: 6rem;
 }
 .btn-sm {
   height: 5.5rem;
@@ -821,7 +827,12 @@ main,
 .footer{
   margin-top: 4rem;
   background: var(--background-secondry);
-  padding: 4rem 1.7rem;
+
+  padding: 4rem 1.7rem 2rem 1.7rem;
+}
+.footer-container{
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .footer-logo{
   margin-left: 2.1rem;
@@ -874,6 +885,19 @@ gap: 2.3rem;
   color: #ccc;
   font-size: var(--base-size);
 }
+.footer-action{
+  margin-top: -1rem;
+}
+.copy-right{
+  margin: 1.5rem 1.5rem;
+  padding: 2.4rem 1rem;
+  border-top: 1px solid #858584;
+}
+.copy-right__txt{
+ font-size: 12px;
+ color: #ccc;
+ font-weight: 400;
+}
 @media screen and (min-width: 650px) {
   .guid--box {
     width: 100%;
@@ -888,11 +912,11 @@ gap: 2.3rem;
   }
 
   .guid-body {
-    width: 94%;
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
     margin: 1rem auto;
-    gap: 2.5rem;
+    gap: 4.5rem;
   }
   .guid--img {
     width: 20rem;
@@ -1004,6 +1028,25 @@ gap: 2.3rem;
     
     min-width: 30rem;
   }
+
+  /* footer */
+  .footer-info{
+    padding: 0 2rem;
+    flex: 1;
+  }
+  .footer--action{
+    display: flex;
+    align-items: baseline;
+    max-width: 42rem;
+  }
+  .footer-input{
+flex: 1;
+  }
+  .footer-btn{
+    flex: 1;
+    margin-left: -3rem;
+    max-width: 17rem;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -1018,6 +1061,13 @@ gap: 2.3rem;
     
     min-width: 40rem;
   }
+  .footer-container{
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .footer-menu{
+    padding: 0;
+    }
 }
 
 @media screen and (min-width: 980px) {
@@ -1066,6 +1116,21 @@ gap: 2.3rem;
     font-size: 2.1rem;
     font-weight: 300;
   }
+  .footer-container{
+    grid-template-columns: 25rem 17rem 1fr;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 6rem;
+    padding: inherit 3rem;
+
+
+    margin: 0 auto;
+  }
+  .footer-info {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1110,11 +1175,12 @@ gap: 2.3rem;
     flex: 1;
   }
   .subscribe-img{
-    flex: 2;
+    flex: 1;
   }
   .subscribe--action{
     display: flex;
     align-items: baseline;
+    max-width: 42rem;
   }
   .subscribe-input{
 flex: 1;
@@ -1122,9 +1188,31 @@ flex: 1;
   .subscribe-btn{
     flex: 1;
     margin-left: -3rem;
+    max-width: 17rem;
   }
   .subscribe__title{
     font-size: var(--h3-size);
     font-weight: 600;
+  }
+
+  .footer-container{
+    grid-template-columns: 32rem 25rem 1fr;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 6rem;
+    padding: inherit 3rem;
+    /* width: 95%; */
+
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1224px){
+  .footer-container{
+  
+   
+    width: 90%;
+
+    margin: 0 auto;
   }
 }
