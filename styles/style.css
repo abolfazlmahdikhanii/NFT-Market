@@ -1035,6 +1035,7 @@ text-transform: capitalize;
   flex-direction: column;
   width: 100%;
   gap: 2rem;
+  margin-top: 3.5rem;
 }
 .txt-btn-white{
   color: #fff;
@@ -1092,9 +1093,29 @@ color: #fff;
 }
 .content-card--2{
   background-color: var(--background);
+ 
+}
+.content-card--2 .discover--img{
+  height: 29.5rem;
 }
 .footer-artist{
   margin-top: 0.3rem;
+}
+.badge-tab{
+  display: none;
+  align-items: center;
+  padding: .5rem 1rem;
+  background-color: var(--background-secondry);
+  font-size: 1.2rem;
+  font-family: "Space Mono", monospace;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.tab-item.active .badge-tab{
+  background-color: #858584;
 }
 @media screen and (min-width: 650px) {
   .guid--box {
@@ -1285,6 +1306,64 @@ color: #fff;
   .form-control,
   .form-btn {
     max-width: 45rem;
+  }
+
+
+  /* artist */
+  .artist-profile__title{
+    font-size: var(--h3-size);
+  }
+  .artist-img{
+    height: 32rem;
+    justify-content: start;
+    padding-left: 6rem;
+    margin-bottom: 2rem;
+  }
+  .artist-profile--img{
+
+  }
+  .artist-profile--info{
+    padding: 2.5rem 2.2rem 0 2.2rem;
+    
+   
+    gap: 4.2rem;
+    width: 100%;
+
+  }
+  .artist-profile--btns{
+
+   
+    flex-direction: row;
+   align-items: center;
+    width: 100%;
+    gap: 3.5rem;
+  }
+  .btn-outline--2{
+    height: var(--btn-primary);
+  }
+  .artist-section--count{
+    padding-left: .5rem;
+    margin: 1rem 0;
+    max-width: 47rem;
+ 
+    justify-content: space-between;
+  }
+  .top-bar{
+    gap: 3rem;
+  }
+ 
+  .tab-item{
+    padding: 0 3rem;
+     display: flex;
+     align-items: center;
+     gap: 1.8rem;
+   
+  }
+  .badge-tab{
+    display: flex;
+  }
+  .content-card{
+    padding: 8rem 5rem;
   }
 }
 
@@ -1478,6 +1557,33 @@ color: #fff;
   }
   .login-title__subtitle {
     font-size: 2.2rem;
+  }
+
+  /* artist */
+  .artist-profile__title{
+    width: 100%;
+    display: block;
+    font-size: var(--h2-size);
+  }
+  .row-profile{
+    width: 100%;
+   display: flex;
+   align-items: baseline;
+ 
+   justify-content: space-between;
+  }
+  .artist-profile--btns{
+   width: 100%;
+   justify-content: flex-end;
+  }
+  .btn-secondry--3,.btn-outline--2{
+    height: 6rem;
+  }
+  .tab-item{
+    padding: 0 6rem;
+    font-size: var(--h5-size);
+    font-weight: 600;
+    gap: 2.5rem;
   }
 }
 
