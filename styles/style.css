@@ -1067,7 +1067,7 @@ color: #fff;
 .top-bar{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
   margin: 3rem 0 0 0;
   border: 1px solid var(--background-secondry);
@@ -1156,6 +1156,10 @@ font-weight: 400;
 }
 .browse-container .top-bar{
 margin: 1rem 0 0 0;
+}
+/* ranking */
+.ranking-top-bar{
+  border: none;
 }
 @media screen and (min-width: 650px) {
   .guid--box {
