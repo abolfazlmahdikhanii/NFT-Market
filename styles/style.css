@@ -1158,8 +1158,48 @@ font-weight: 400;
 margin: 1rem 0 0 0;
 }
 /* ranking */
+.ranking-main{
+  padding-bottom: 2rem;
+}
 .ranking-top-bar{
   border: none;
+}
+.table-box{
+  padding: 4rem 2.5rem;
+}
+.tbl-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 2.7rem;
+  border: 1px solid var(--background-secondry);
+  border-radius: 2.2rem;
+  -webkit-border-radius: 2.2rem;
+  -moz-border-radius: 2.2rem;
+  -ms-border-radius: 2.2rem;
+  -o-border-radius: 2.2rem;
+}
+.tbl-header--row{
+  display: flex;
+  
+  align-items: center;
+  gap: 1.8rem;
+}
+.tbl-header--row--left{
+  flex: 2;
+}
+.tbl-header--row--right{
+  flex: 1;
+}
+
+.tbl-header--row p{
+  text-align: left;
+  color: var(--lbl-text);
+  font-family: "Space Mono", monospace;
+  font-size: 1.4rem;
+  font-weight: 400;
+  
+
 }
 @media screen and (min-width: 650px) {
   .guid--box {
