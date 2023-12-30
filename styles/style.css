@@ -1201,6 +1201,67 @@ margin: 1rem 0 0 0;
   
 
 }
+.tbl-body{
+
+}
+.tbl-body--item{
+  margin-top: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 2.7rem;
+  background-color:  var(--background-secondry);
+  border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+}
+.tbl-body--item-left{
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+.item-left__num{
+  color: var(--lbl-text);
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.item-left--row{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.item-left--img{
+width: 4rem;
+height: 4rem;
+}
+.item-left--img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.item-left__author{
+font-weight: 400;
+}
+.tbl-body--item-right{
+
+}
+.item-right__price{
+  color: var(--lbl-text);
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
 @media screen and (min-width: 650px) {
   .guid--box {
     width: 100%;
