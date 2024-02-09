@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- ###### HEADER ####### -->
+    <header class="header">
+      <!-- Header-Logo -->
+      <div class="header-logo">
+        <svg
+          class="header-logo__icon"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M6 12.4502C6.55228 12.4502 7 12.8979 7 13.4502V26.0002H25V13.4502C25 12.8979 25.4477 12.4502 26 12.4502C26.5523 12.4502 27 12.8979 27 13.4502V26.0002C27 26.5306 26.7893 27.0393 26.4142 27.4144C26.0391 27.7895 25.5304 28.0002 25 28.0002H7C6.46957 28.0002 5.96086 27.7895 5.58579 27.4144C5.21071 27.0393 5 26.5306 5 26.0002V13.4502C5 12.8979 5.44772 12.4502 6 12.4502Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3 5C3 4.44772 3.44772 4 4 4H28C28.5523 4 29 4.44772 29 5C29 5.55228 28.5523 6 28 6H4C3.44772 6 3 5.55228 3 5Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 7C4.55228 7 5 7.44772 5 8V10C5 10.7956 5.31607 11.5587 5.87868 12.1213C6.44129 12.6839 7.20435 13 8 13C8.79565 13 9.55871 12.6839 10.1213 12.1213C10.6839 11.5587 11 10.7956 11 10V8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8V10C13 11.3261 12.4732 12.5979 11.5355 13.5355C10.5979 14.4732 9.32608 15 8 15C6.67392 15 5.40215 14.4732 4.46447 13.5355C3.52678 12.5979 3 11.3261 3 10V8C3 7.44772 3.44772 7 4 7Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 7C12.5523 7 13 7.44772 13 8V10C13 10.7956 13.3161 11.5587 13.8787 12.1213C14.4413 12.6839 15.2044 13 16 13C16.7956 13 17.5587 12.6839 18.1213 12.1213C18.6839 11.5587 19 10.7956 19 10V8C19 7.44772 19.4477 7 20 7C20.5523 7 21 7.44772 21 8V10C21 11.3261 20.4732 12.5979 19.5355 13.5355C18.5979 14.4732 17.3261 15 16 15C14.6739 15 13.4021 14.4732 12.4645 13.5355C11.5268 12.5979 11 11.3261 11 10V8C11 7.44772 11.4477 7 12 7Z"
+            fill="#A259FF"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M20 7C20.5523 7 21 7.44772 21 8V10C21 10.7956 21.3161 11.5587 21.8787 12.1213C22.4413 12.6839 23.2044 13 24 13C24.7956 13 25.5587 12.6839 26.1213 12.1213C26.6839 11.5587 27 10.7956 27 10V8C27 7.44772 27.4477 7 28 7C28.5523 7 29 7.44772 29 8V10C29 11.3261 28.4732 12.5979 27.5355 13.5355C26.5979 14.4732 25.3261 15 24 15C22.6739 15 21.4021 14.4732 20.4645 13.5355C19.5268 12.5979 19 11.3261 19 10V8C19 7.44772 19.4477 7 20 7Z"
+            fill="#A259FF"
+          />
+        </svg>
+
+        <img src="./assets/images/nft-marketplace-2@2x.svg" alt="logo-title" />
+      </div>
+      <!-- Header Menu -->
+      <nav class="header-menu">
+        <p class="menu-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 16C4 15.4477 4.44772 15 5 15H27C27.5523 15 28 15.4477 28 16C28 16.5523 27.5523 17 27 17H5C4.44772 17 4 16.5523 4 16Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 8C4 7.44772 4.44772 7 5 7H20C20.5523 7 21 7.44772 21 8C21 8.55228 20.5523 9 20 9H5C4.44772 9 4 8.55228 4 8Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 24C4 23.4477 4.44772 23 5 23H20C20.5523 23 21 23.4477 21 24C21 24.5523 20.5523 25 20 25H5C4.44772 25 4 24.5523 4 24Z"
+              fill="white"
+            />
+          </svg>
+        </p>
+
+        <!-- Menu -->
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a class="menu__link" href="#">Marketplace</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu__link" href="#">Rankings</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu__link" href="#">Connect a wallet</a>
+          </li>
+          <li class="menu-item">
+            <button class="btn btn-secondry">
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10 3.125C7.58375 3.125 5.625 5.08375 5.625 7.5C5.625 9.91625 7.58375 11.875 10 11.875C12.4162 11.875 14.375 9.91625 14.375 7.5C14.375 5.08375 12.4162 3.125 10 3.125ZM4.375 7.5C4.375 4.3934 6.8934 1.875 10 1.875C13.1066 1.875 15.625 4.3934 15.625 7.5C15.625 10.6066 13.1066 13.125 10 13.125C6.8934 13.125 4.375 10.6066 4.375 7.5Z"
+                    fill="white"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.0001 13.124C8.57374 13.124 7.17251 13.4995 5.93728 14.2128C4.70205 14.926 3.67634 15.9518 2.96327 17.1872C2.79071 17.4861 2.40848 17.5886 2.10953 17.416C1.81058 17.2435 1.70812 16.8612 1.88068 16.5623C2.70345 15.1369 3.88696 13.9532 5.31223 13.1303C6.7375 12.3073 8.3543 11.874 10.0001 11.874C11.6459 11.874 13.2627 12.3073 14.688 13.1303C16.1132 13.9532 17.2968 15.1369 18.1195 16.5623C18.2921 16.8612 18.1896 17.2435 17.8907 17.416C17.5917 17.5886 17.2095 17.4861 17.0369 17.1872C16.3239 15.9518 15.2982 14.926 14.0629 14.2128C12.8277 13.4995 11.4265 13.124 10.0001 13.124Z"
+                    fill="white"
+                  />
+                </svg>
+              </p>
+              <p>Sign Up</p>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nft-banner">
+      <img src="./assets/images/Image PlaceHolder-banner.png" alt="" />
+    </div>
+
+    <section class="nft-container browse-container">
+      <div class="nft-info">
+        <h4 class="nft-info__title">The Orbitians</h4>
+        <p class="nft-info__dis">Minted on Sep 30, 2022</p>
+      </div>
+
+      <div class="nft-main browse-main">
+        <div class="timer timer--nft">
+          <p class="timer__title">Auction ends in:</p>
+          <div class="timer-row">
+            <div class="timer-count">
+              <p class="timer__num">59</p>
+              <p class="timer__sub">Hours</p>
+            </div>
+            <p class="timer__dot">:</p>
+            <div class="timer-count">
+              <p class="timer__num">59</p>
+              <p class="timer__sub">Minutes</p>
+            </div>
+            <p class="timer__dot">:</p>
+            <div class="timer-count">
+              <p class="timer__num">59</p>
+              <p class="timer__sub">Seconds</p>
+            </div>
+          </div>
+          <div class="btn--nft">
+            <div class="btn btn-secondry">Get Start</div>
+          </div>
+        </div>
+        <div class="profile-content">
+          <p class="profile-content__title">Created By</p>
+          <div class="profile">
+            <div class="profile-img">
+              <img src="./assets/images/avatar-1.png" alt="" />
+            </div>
+            <p class="profile__user">MoonDancer</p>
+          </div>
+        </div>
+
+        <div class="dis-content">
+          <p class="dis-content__title">Description</p>
+          <p class="dis-content__txt">
+            The Orbitians<br />is a collection of 10,000 unique NFTs on the
+            Ethereum blockchain,<br /><br />There are all sorts of beings in the
+            NFT Universe. The most advanced and friendly of the bunch are
+            Orbitians. <br /><br />They live in a metal space machines, high up
+            in the sky and only have one foot on Earth.<br />These Orbitians are
+            a peaceful race, but they have been at war with a group of invaders
+            for many generations. The invaders are called Upside-Downs, because
+            of their inverted bodies that live on the ground, yet do not know
+            any other way to be. Upside-Downs believe that they will be able to
+            win this war if they could only get an eye into Orbitian territory,
+            so they've taken to make human beings their target.
+          </p>
+        </div>
+        <div class="detail-content">
+          <p class="profile-content__title">Details</p>
+          <div class="detail-content__item">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25C16.5563 20.25 20.25 16.5563 20.25 12C20.25 7.44365 16.5563 3.75 12 3.75ZM2.25 12C2.25 6.61522 6.61522 2.25 12 2.25C17.3848 2.25 21.75 6.61522 21.75 12C21.75 17.3848 17.3848 21.75 12 21.75C6.61522 21.75 2.25 17.3848 2.25 12Z"
+                fill="#858584"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.76562 9C2.76562 8.58579 3.10141 8.25 3.51562 8.25H20.4844C20.8986 8.25 21.2344 8.58579 21.2344 9C21.2344 9.41421 20.8986 9.75 20.4844 9.75H3.51562C3.10141 9.75 2.76562 9.41421 2.76562 9Z"
+                fill="#858584"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.76562 15C2.76562 14.5858 3.10141 14.25 3.51562 14.25H20.4844C20.8986 14.25 21.2344 14.5858 21.2344 15C21.2344 15.4142 20.8986 15.75 20.4844 15.75H3.51562C3.10141 15.75 2.76562 15.4142 2.76562 15Z"
+                fill="#858584"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.0378 6.10405C9.4079 7.57484 9 9.659 9 12.0004C9 14.3418 9.4079 16.4259 10.0378 17.8967C10.3533 18.6335 10.7097 19.1817 11.0673 19.5349C11.4217 19.8849 11.736 20.0066 12 20.0066C12.264 20.0066 12.5783 19.8849 12.9327 19.5349C13.2903 19.1817 13.6467 18.6335 13.9622 17.8967C14.5921 16.4259 15 14.3418 15 12.0004C15 9.659 14.5921 7.57484 13.9622 6.10405C13.6467 5.36731 13.2903 4.81904 12.9327 4.46587C12.5783 4.11587 12.264 3.99414 12 3.99414C11.736 3.99414 11.4217 4.11587 11.0673 4.46587C10.7097 4.81904 10.3533 5.36731 10.0378 6.10405ZM10.0133 3.39863C10.5562 2.86245 11.2284 2.49414 12 2.49414C12.7716 2.49414 13.4438 2.86245 13.9867 3.39863C14.5264 3.93164 14.978 4.66569 15.3411 5.51353C16.0684 7.21187 16.5 9.50584 16.5 12.0004C16.5 14.4949 16.0684 16.7889 15.3411 18.4873C14.978 19.3351 14.5264 20.0691 13.9867 20.6022C13.4438 21.1383 12.7716 21.5066 12 21.5066C11.2284 21.5066 10.5562 21.1383 10.0133 20.6022C9.47362 20.0691 9.02201 19.3351 8.65891 18.4873C7.93157 16.7889 7.5 14.4949 7.5 12.0004C7.5 9.50584 7.93157 7.21187 8.65891 5.51353C9.02201 4.66569 9.47362 3.93164 10.0133 3.39863Z"
+                fill="#858584"
+              />
+            </svg>
+            <p class="detail-content__text">View on Etherscan</p>
+          </div>
+          <div class="detail-content__item">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25C16.5563 20.25 20.25 16.5563 20.25 12C20.25 7.44365 16.5563 3.75 12 3.75ZM2.25 12C2.25 6.61522 6.61522 2.25 12 2.25C17.3848 2.25 21.75 6.61522 21.75 12C21.75 17.3848 17.3848 21.75 12 21.75C6.61522 21.75 2.25 17.3848 2.25 12Z"
+                fill="#858584"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.76562 9C2.76562 8.58579 3.10141 8.25 3.51562 8.25H20.4844C20.8986 8.25 21.2344 8.58579 21.2344 9C21.2344 9.41421 20.8986 9.75 20.4844 9.75H3.51562C3.10141 9.75 2.76562 9.41421 2.76562 9Z"
+                fill="#858584"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.76562 15C2.76562 14.5858 3.10141 14.25 3.51562 14.25H20.4844C20.8986 14.25 21.2344 14.5858 21.2344 15C21.2344 15.4142 20.8986 15.75 20.4844 15.75H3.51562C3.10141 15.75 2.76562 15.4142 2.76562 15Z"
+                fill="#858584"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.0378 6.10405C9.4079 7.57484 9 9.659 9 12.0004C9 14.3418 9.4079 16.4259 10.0378 17.8967C10.3533 18.6335 10.7097 19.1817 11.0673 19.5349C11.4217 19.8849 11.736 20.0066 12 20.0066C12.264 20.0066 12.5783 19.8849 12.9327 19.5349C13.2903 19.1817 13.6467 18.6335 13.9622 17.8967C14.5921 16.4259 15 14.3418 15 12.0004C15 9.659 14.5921 7.57484 13.9622 6.10405C13.6467 5.36731 13.2903 4.81904 12.9327 4.46587C12.5783 4.11587 12.264 3.99414 12 3.99414C11.736 3.99414 11.4217 4.11587 11.0673 4.46587C10.7097 4.81904 10.3533 5.36731 10.0378 6.10405ZM10.0133 3.39863C10.5562 2.86245 11.2284 2.49414 12 2.49414C12.7716 2.49414 13.4438 2.86245 13.9867 3.39863C14.5264 3.93164 14.978 4.66569 15.3411 5.51353C16.0684 7.21187 16.5 9.50584 16.5 12.0004C16.5 14.4949 16.0684 16.7889 15.3411 18.4873C14.978 19.3351 14.5264 20.0691 13.9867 20.6022C13.4438 21.1383 12.7716 21.5066 12 21.5066C11.2284 21.5066 10.5562 21.1383 10.0133 20.6022C9.47362 20.0691 9.02201 19.3351 8.65891 18.4873C7.93157 16.7889 7.5 14.4949 7.5 12.0004C7.5 9.50584 7.93157 7.21187 8.65891 5.51353C9.02201 4.66569 9.47362 3.93164 10.0133 3.39863Z"
+                fill="#858584"
+              />
+            </svg>
+            <p class="detail-content__text">View Original</p>
+          </div>
+        </div>
+        <div class="tag-content">
+          <p class="profile-content__title">Tags</p>
+          <div class="tag-list">
+            <div class="tag-item">
+              <a href="#" class="tag-item__link"> ANIMATION </a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-item__link"> ILLUSTRATION </a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-item__link"> Moon </a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-item__link"> Moon </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- topbar -->
+
+      <!-- content -->
+      <div class="nft-products">
+        <div class="nft-products__header">
+          <h4 class="nft-products__title">More from this artist</h4>
+        </div>
+        <!-- body -->
+        <div class="discovery-body">
+          <div class="category--box">
+            <div class="discover--img">
+              <img
+                src="./assets/images/image-placeholder-62@2x.png"
+                alt="bg"
+                class="discover__img"
+              />
+            </div>
+
+            <div class="discover-dis">
+              <div class="discover-info--1">
+                <p class="category__title">Distant Galaxy</p>
+                <div class="profile">
+                  <div class="profile-img">
+                    <img src="./assets/images/avatar-1.png" alt="" />
+                  </div>
+                  <p class="profile__user">MoonDancer</p>
+                </div>
+              </div>
+              <div class="discover-info--2">
+                <div class="sub-info sub-info-1">
+                  <p class="discovre__sub">Price</p>
+                  <p class="discover__price">1.63 <span>ETH</span></p>
+                </div>
+                <div class="sub-info sub-info-2">
+                  <p class="discovre__sub">Highest Bid</p>
+                  <p class="discover__price">0.33 <span>wETH</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category--box ">
+            <div class="discover--img">
+              <img
+                src="./assets/images/image-placeholder-62@2x.png"
+                alt="bg"
+                class="discover__img"
+              />
+            </div>
+
+            <div class="discover-dis">
+              <div class="discover-info--1">
+                <p class="category__title">Distant Galaxy</p>
+                <div class="profile">
+                  <div class="profile-img">
+                    <img src="./assets/images/avatar-1.png" alt="" />
+                  </div>
+                  <p class="profile__user">MoonDancer</p>
+                </div>
+              </div>
+              <div class="discover-info--2">
+                <div class="sub-info sub-info-1">
+                  <p class="discovre__sub">Price</p>
+                  <p class="discover__price">1.63 <span>ETH</span></p>
+                </div>
+                <div class="sub-info sub-info-2">
+                  <p class="discovre__sub">Highest Bid</p>
+                  <p class="discover__price">0.33 <span>wETH</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="category--box ">
+            <div class="discover--img">
+              <img
+                src="./assets/images/image-placeholder-62@2x.png"
+                alt="bg"
+                class="discover__img"
+              />
+            </div>
+
+            <div class="discover-dis">
+              <div class="discover-info--1">
+                <p class="category__title">Distant Galaxy</p>
+                <div class="profile">
+                  <div class="profile-img">
+                    <img src="./assets/images/avatar-1.png" alt="" />
+                  </div>
+                  <p class="profile__user">MoonDancer</p>
+                </div>
+              </div>
+              <div class="discover-info--2">
+                <div class="sub-info sub-info-1">
+                  <p class="discovre__sub">Price</p>
+                  <p class="discover__price">1.63 <span>ETH</span></p>
+                </div>
+                <div class="sub-info sub-info-2">
+                  <p class="discovre__sub">Highest Bid</p>
+                  <p class="discover__price">0.33 <span>wETH</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer footer-artist">
+      <section class="footer-container">
+        <!-- item-1 -->
+        <div>
+          <div class="footer-logo">
+            <svg
+              class="footer-logo__icon"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6 12.4502C6.55228 12.4502 7 12.8979 7 13.4502V26.0002H25V13.4502C25 12.8979 25.4477 12.4502 26 12.4502C26.5523 12.4502 27 12.8979 27 13.4502V26.0002C27 26.5306 26.7893 27.0393 26.4142 27.4144C26.0391 27.7895 25.5304 28.0002 25 28.0002H7C6.46957 28.0002 5.96086 27.7895 5.58579 27.4144C5.21071 27.0393 5 26.5306 5 26.0002V13.4502C5 12.8979 5.44772 12.4502 6 12.4502Z"
+                fill="#A259FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 5C3 4.44772 3.44772 4 4 4H28C28.5523 4 29 4.44772 29 5C29 5.55228 28.5523 6 28 6H4C3.44772 6 3 5.55228 3 5Z"
+                fill="#A259FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4 7C4.55228 7 5 7.44772 5 8V10C5 10.7956 5.31607 11.5587 5.87868 12.1213C6.44129 12.6839 7.20435 13 8 13C8.79565 13 9.55871 12.6839 10.1213 12.1213C10.6839 11.5587 11 10.7956 11 10V8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8V10C13 11.3261 12.4732 12.5979 11.5355 13.5355C10.5979 14.4732 9.32608 15 8 15C6.67392 15 5.40215 14.4732 4.46447 13.5355C3.52678 12.5979 3 11.3261 3 10V8C3 7.44772 3.44772 7 4 7Z"
+                fill="#A259FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 7C12.5523 7 13 7.44772 13 8V10C13 10.7956 13.3161 11.5587 13.8787 12.1213C14.4413 12.6839 15.2044 13 16 13C16.7956 13 17.5587 12.6839 18.1213 12.1213C18.6839 11.5587 19 10.7956 19 10V8C19 7.44772 19.4477 7 20 7C20.5523 7 21 7.44772 21 8V10C21 11.3261 20.4732 12.5979 19.5355 13.5355C18.5979 14.4732 17.3261 15 16 15C14.6739 15 13.4021 14.4732 12.4645 13.5355C11.5268 12.5979 11 11.3261 11 10V8C11 7.44772 11.4477 7 12 7Z"
+                fill="#A259FF"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20 7C20.5523 7 21 7.44772 21 8V10C21 10.7956 21.3161 11.5587 21.8787 12.1213C22.4413 12.6839 23.2044 13 24 13C24.7956 13 25.5587 12.6839 26.1213 12.1213C26.6839 11.5587 27 10.7956 27 10V8C27 7.44772 27.4477 7 28 7C28.5523 7 29 7.44772 29 8V10C29 11.3261 28.4732 12.5979 27.5355 13.5355C26.5979 14.4732 25.3261 15 24 15C22.6739 15 21.4021 14.4732 20.4645 13.5355C19.5268 12.5979 19 11.3261 19 10V8C19 7.44772 19.4477 7 20 7Z"
+                fill="#A259FF"
+              />
+            </svg>
+
+            <img
+              src="./assets/images/nft-marketplace-1@2x copy.svg"
+              alt="logo-title"
+            />
+          </div>
+          <!-- dis -->
+          <p class="footer__dis">
+            NFT marketplace UI created with Anima for Figma.
+          </p>
+
+          <!-- community -->
+          <div class="community">
+            <p class="social__dis">Join our community</p>
+            <ul class="social-list">
+              <li class="social-item">
+                <img src="./assets/images/discord.svg" alt="" />
+              </li>
+              <li class="social-item">
+                <img src="./assets/images/youtube.svg" alt="" />
+              </li>
+              <li class="social-item">
+                <img src="./assets/images/twitter.svg" alt="" />
+              </li>
+              <li class="social-item">
+                <img src="./assets/images/instagram.svg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- menu -->
+        <div class="footer-menu">
+          <h4 class="footer-menu__title">Explore</h4>
+          <div class="footer-menu--list">
+            <p class="footer-menu__item">Marketplace</p>
+            <p class="footer-menu__item">Rankings</p>
+            <p class="footer-menu__item">Connect a wallet</p>
+          </div>
+        </div>
+        <div class="footer-info">
+          <div>
+            <h4 class="footer-info__title">Join our weekly digest</h4>
+            <p class="footer-info__dis">
+              Get exclusive promotions & updates straight to your inbox.
+            </p>
+          </div>
+          <div class="footer--action footer-action">
+            <div class="footer-input">
+              <input
+                type="text"
+                placeholder="Enter Your Email Address"
+                class="footer-input__input"
+              />
+            </div>
+            <div class="footer-btn">
+              <button class="btn btn-secondry btn-sm">subscribe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- copyRight -->
+
+      <div class="copy-right">
+        <p class="copy-right__txt">
+          &copy; NFT Market. Use this template freely.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
